@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <a href="index.html">Sair</a><hr>
+</header>
+<main>
+    <h1>Login</h1>
+    <form id="form">
+        <label for="usuario">Usuário:</label>
+        <label for="senha">Senha:</label>
+        <input for="Password" id="Senha">
+        <input type="text" id="usuario">
+        <br>
+        <button type="button" id="botao-entrar">Entrar</button>
+    </form>
+    <p id="Mensagem"></p>
+    <script>
+    const botao = document.querySelector("#botao-entrar");
+     botao.addEventListener("click", function() {
+    const usuario =document.querySelector("#usuario").value;
+    const Senha =document.querySelector("#Senha").value;
+    const mensagem =document.querySelector("#Mensagem");
+
+    if (usuario === "text" && Senha === "123") {
+         window.location.href = "usuario.html";
+    } else if (usuario === "") {
+        mensagem.textContent ="Campo usuario nao pode ficar vazio!";
+    } else if (Senha === "") {
+        mensagem.textContent ="Campo senha nao pode ficar vazio!";
+    } else {
+        mensagem.textContent ="Usuário ou senha incorretos!";
+    }});
+</script>
+</main>
+
+<footer>
+    <p>Todos os direitos reservados </p>
+</footer>
+</body>
+</html>
